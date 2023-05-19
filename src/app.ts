@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+require('dotenv').config()
+
 import { Command } from 'commander';
 
 import { 
@@ -30,9 +33,9 @@ let main = async () => {
     .version('1.0.0')
     .option('-t, --tasksDB <tasksDB>', 'Notion Database ID for your task board')
     .option('-c, --commandsDB <commandsDB>', 'Notion Database ID to populate available commands')
-    .option('-n, --name <name>', 'Name this agent to assign tasks to specific instances. ')
-    .option('-d, --debug', 'Enable debug console logs')
-    .option('-l, --log', 'Enable debug logging to file')
+    .option('-n, --name <name>', 'name agents to assign tasks to specific instances')
+    .option('-d, --debug', 'enable debug console logs')
+    .option('-l, --log', 'enable debug logging to file')
     .parse(process.argv);
 
   const options = program.opts();
