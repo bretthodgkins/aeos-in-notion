@@ -1,0 +1,13 @@
+  {
+    configuration: {
+      enableLogToConsole: false, // enables debug logs
+      enableLogToFile: false, // writes debug logs to ./access.log
+    },
+    userVariables: {
+      // key value pairs that will be available on startup
+      aeosName: 'aeos',
+    },
+    plugins: [
+      // accepts local paths or npm package names
+    ],
+  }
