@@ -6,8 +6,7 @@
 
 ## What is Aeos?
 
-Aeos is an open-source AI automation platform that harnesses the power of Large Language Models (LLMs) to build and run complex automations.
-
+[Aeos](https://github.com/bretthodgkins/aeos) is an open-source AI automation platform that harnesses the power of Large Language Models (LLMs) to build and run complex automations.
 
 It's designed to be highly extendible, allowing users to create their own automations, and provide examples of them being called using natural language.
 
@@ -54,10 +53,10 @@ You'll need a Notion account, and will need to create the following two database
 The command-line tool itself, can be easily installed globally with npm:
 
 ```bash
-npm install -g bhodgk/aeos-in-notion
+npm install -g @bhodgk/aeos-in-notion
 ```
 
-Alternatively, you may prefer to use Aeos Desktop (supports Mac OS, Windows and Linux) or Aeos CLI.
+Alternatively, you may prefer to use Aeos Desktop (supports Mac OS, Windows and Linux) or [Aeos CLI](https://github.com/bretthodgkins/aeos).
 
 <br>
 
@@ -80,10 +79,31 @@ To run aeos-in-notion you can simply run:
 aeos-in-notion
 
 # Start application with specific arguments
-aeos-in-notion --commandsDB="xxxx" --tasksDB="xxxx" --name="aeos"
+aeos-in-notion --commandsDB="xxxx" --tasksDB="xxxx" --name="xxxx"
 ```
 
 The above commands are basic ways to use Aeos. For more advanced usage, please refer to the full documentation.
+
+<br>
+
+## Running Multiple Instances with PM2
+
+To manage multiple instances of Aeos at once, you can use PM2, a production process manager for Node.js applications. PM2 makes it easier to manage and keep your application online.
+
+1. First, make sure you have PM2 installed. If not, you can install it globally with npm:
+
+```bash
+npm install -g pm2
+```
+
+2. You can then start multiple instances of your Aeos agents by providing different names for each one using the --name argument:
+
+```bash
+pm2 start aeos-in-notion --name "aeos1" -- --commandsDB="xxxx" --tasksDB="xxxx"
+pm2 start aeos-in-notion --name "aeos2" -- --commandsDB="xxxx" --tasksDB="xxxx"
+```
+
+Check out the [PM2 website](https://pm2.keymetrics.io/) for more info.
 
 <br>
 
