@@ -1,5 +1,5 @@
 {
-  "name": "aeos-in-notion",
+  "name": "@bhodgk/aeos-in-notion",
   "version": "1.0.0",
   "description": "Aeos In Notion - Schedule and monitor an army of AI agents in Notion",
   "main": "build/notionPlugin.js",
